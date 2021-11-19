@@ -45,7 +45,7 @@ public class TestPlan {
         Assert.assertEquals(productsPage.getCardBadge(), "1");
     }
 
-    @Test(testName = "Login fallido - credenciales invalidas")
+    @Test(testName = "Credenciales incorrectas - Verificar login no válido (TC 1)")
     public static void loginInvalido(){
         driver.get(Utils.BASE_URL);
         LoginForm loginForm = new LoginForm(driver);
@@ -58,7 +58,7 @@ public class TestPlan {
         Assert.assertEquals(loginForm.getErrorMessage(), "Epic sadface: Username and password do not match any user in this service");
     }
 
-    @Test(testName = "Logout exitoso")
+    @Test(testName = "Desloguearse correctamente (TC 2)")
     public static void logoutExitoso(){
         driver.get(Utils.BASE_URL);
         LoginForm loginForm = new LoginForm(driver);
